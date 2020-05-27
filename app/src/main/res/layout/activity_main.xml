@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/dj_disk"
+        android:layout_width="368dp"
+        android:layout_height="262dp"
+        android:layout_marginTop="116dp"
+        android:contentDescription="@string/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/dj_disk" />
+
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="320dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dj_disk" />
+
+    <ImageButton
+        android:id="@+id/play_pause_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="70dp"
+        android:contentDescription="@string/playBtn"
+        android:padding="0dp"
+        android:onClick="play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/next_btn"
+        app:layout_constraintStart_toEndOf="@+id/prev_btn"
+        app:srcCompat="@mipmap/play" />
+
+    <ImageButton
+        android:id="@+id/prev_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="70dp"
+        android:contentDescription="@string/prevBtn"
+        android:padding="0dp"
+        android:onClick="previous"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/play_pause_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/prev" />
+
+    <ImageButton
+        android:id="@+id/next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="70dp"
+        android:padding="0dp"
+        android:contentDescription="@string/nextBtn"
+        android:onClick="next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/play_pause_btn"
+        app:srcCompat="@mipmap/next" />
+
+    <TextView
+        android:id="@+id/song_title"
+        android:layout_width="341dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="@string/songTitle"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/current_time"
+        android:layout_width="55sp"
+        android:layout_height="20sp"
+        android:layout_marginStart="200dp"
+        android:gravity="end"
+        android:text="@string/currentTime"
+        android:textAlignment="viewEnd"
+        app:layout_constraintBottom_toTopOf="@+id/seek_bar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/total_time"
+        android:layout_width="60sp"
+        android:layout_height="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/totalTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dj_disk" />
+</androidx.constraintlayout.widget.ConstraintLayout>

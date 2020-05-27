@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MP3 Clone</string>
+    <string name="songName" />
+    <string name="info" />
+    <string name="title_activity_play">PlayActivity</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="image">image_music</string>
+    <string name="prevBtn">prev</string>
+    <string name="playBtn">play</string>
+    <string name="nextBtn">next</string>
+    <string name="songTitle" />
+    <string name="currentTime" />
+    <string name="totalTime" />
+</resources>
